@@ -1,0 +1,30 @@
+<!-- subjects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Select Subjects</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <h1>Choose Subjects</h1>
+      <div><button class="small-link" onclick="window.location.href='role.html'">Back</button></div>
+    </div>
+
+    <p class="subtitle">Pick the subjects you are interested in</p>
+
+    <div id="subjectsGrid" class="subject-grid"></div>
+
+    <div style="margin-top:12px;">
+      <button class="primary-btn" onclick="confirmSubjects()">Next</button>
+    </div>
+
+    <p id="subMsg" class="message"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

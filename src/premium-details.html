@@ -1,0 +1,50 @@
+<!-- premium-details.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Premium Details</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <h1>Premium Plan</h1>
+      <div><button class="small-link" onclick="window.location.href='index.html'">Back</button></div>
+    </div>
+
+    <p class="subtitle">Complete payment details to activate Premium</p>
+
+    <div class="card">
+      <h2>Premium — ₹199 / month</h2>
+      <ul style="text-align:left;">
+        <li>✔ Full materials</li>
+        <li>✔ Video lectures</li>
+        <li>✔ Priority support & downloads</li>
+      </ul>
+
+      <label class="small" for="bankId">Enter Bank / UPI ID</label>
+      <input id="bankId" type="text" placeholder="example@upi">
+
+      <button class="primary-btn" onclick="activatePremium()">Activate Premium</button>
+      <p id="premiumMessage" class="message"></p>
+    </div>
+
+    <footer>Secure (mock) payment — no real transactions done</footer>
+  </div>
+
+  <script>
+    function activatePremium(){
+      const id = document.getElementById('bankId').value.trim();
+      const el = document.getElementById('premiumMessage');
+      if(!id){ el.textContent = "Enter a UPI/Bank ID"; el.style.color='red'; return; }
+      localStorage.setItem('selectedPlan','Premium');
+      localStorage.setItem('premiumActivated','true');
+      el.textContent = "Premium activated 🎉";
+      el.style.color = 'green';
+      setTimeout(()=> window.location.href='index.html', 900);
+    }
+  </script>
+</body>
+</html>

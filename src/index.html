@@ -1,0 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EduApp — Login & Plans</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container" id="page">
+    <div class="topbar">
+      <h1>EduLibrary</h1>
+      <div>
+        <button class="small-link" onclick="window.location.href='settings.html'">Settings</button>
+      </div>
+    </div>
+
+    <p class="subtitle">Choose a plan, then login</p>
+
+    <div class="card-container">
+      <div class="card role-card" onclick="choosePlan('Free')">
+        <h3>Free</h3>
+        <p class="small">Access study materials (Free)</p>
+      </div>
+
+      <div class="card role-card" onclick="choosePlan('Premium')">
+        <h3>Premium</h3>
+        <p class="small">Materials + videos + priority</p>
+      </div>
+    </div>
+
+    <p id="subscriptionMessage" class="message"></p>
+
+    <form id="loginForm" class="card login-card">
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="you@example.com" required>
+      <button class="primary-btn" type="submit">Login</button>
+    </form>
+
+    <p id="loginMessage" class="message"></p>
+
+    <footer>Made with ❤ — EduApp</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

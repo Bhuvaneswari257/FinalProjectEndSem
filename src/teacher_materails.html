@@ -1,0 +1,38 @@
+<!-- teacher_materials.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Teacher — Manage Materials</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <h1>Teacher — Manage Materials</h1>
+      <div>
+        <button class="small-link" onclick="window.location.href='settings.html'">Settings</button>
+        <button class="small-link" onclick="window.location.href='role.html'">Change Role</button>
+      </div>
+    </div>
+
+    <p class="subtitle">Upload documents or videos for your students</p>
+
+    <div class="card">
+      <input id="fileInput" type="file">
+      <input id="fileTitle" type="text" placeholder="Enter title">
+      <select id="fileSubject"></select>
+      <button class="primary-btn" onclick="uploadMaterial()">Upload</button>
+      <p id="uploadMsg" class="message"></p>
+    </div>
+
+    <h3 style="margin-top:16px;">Your Uploaded Materials</h3>
+    <ul id="materialsList" class="materials-list"></ul>
+
+    <footer>Manage resources — EduApp</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

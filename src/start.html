@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Plan</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Choose Your Plan</h1>
+    <p class="subtitle">Select a subscription to continue</p>
+
+    <div class="card-container">
+
+      <!-- FREE PLAN -->
+      <div class="card role-card" onclick="selectPlan('Free')">
+        <h2>Free Plan</h2>
+        <p>Access basic study materials</p>
+      </div>
+
+      <!-- PREMIUM PLAN -->
+      <div class="card role-card" onclick="selectPlan('Premium')">
+        <h2>Premium Plan</h2>
+        <p>Videos + Premium content</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    function selectPlan(plan) {
+      localStorage.setItem("selectedPlan", plan);
+
+      if (plan === "Free") {
+        window.location.href = "login.html";  // GO TO LOGIN
+      } else {
+        window.location.href = "premium-details.html"; // GO TO PREMIUM PAGE
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Plan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Select Your Plan</h1>
+    <p class="subtitle">Choose a plan to continue</p>
+
+    <div class="card-container">
+
+        <div class="card role-card" onclick="selectPlan('Free')">
+            <h2>Free Plan</h2>
+            <p>Access free study materials</p>
+        </div>
+
+        <div class="card role-card" onclick="selectPlan('Premium')">
+            <h2>Premium Plan</h2>
+            <p>Videos + Materials + Support</p>
+        </div>
+
+    </div>
+
+    <p id="planMessage" class="message"></p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

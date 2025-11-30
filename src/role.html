@@ -1,0 +1,36 @@
+<!-- role.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Select Role</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <h1>Select Role</h1>
+      <div><button class="small-link" onclick="window.location.href='index.html'">Logout</button></div>
+    </div>
+
+    <p class="subtitle">Choose Student or Teacher</p>
+
+    <div class="card-container">
+      <div class="card role-card" onclick="selectRole('student')">
+        <h3>Student</h3>
+        <p class="small">I want to learn</p>
+      </div>
+
+      <div class="card role-card" onclick="selectRole('teacher')">
+        <h3>Teacher</h3>
+        <p class="small">I want to upload/manage content</p>
+      </div>
+    </div>
+
+    <footer>Choose to continue</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

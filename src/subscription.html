@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription - EduApp</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Select a Subscription Plan</h1>
+    <p class="subtitle">Choose a plan to unlock full access</p>
+
+    <div class="card-container">
+
+      <div class="card">
+        <h2>Basic Plan</h2>
+        <p>Access study materials</p>
+        <button class="primary-btn" onclick="subscribe('Basic')">Subscribe ₹99</button>
+      </div>
+
+      <div class="card">
+        <h2>Premium Plan</h2>
+        <p>Access materials + video content</p>
+        <button class="primary-btn" onclick="subscribe('Premium')">Subscribe ₹199</button>
+      </div>
+
+    </div>
+
+    <button class="secondary-btn" onclick="window.location.href='dashboard.html'">⬅ Back</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

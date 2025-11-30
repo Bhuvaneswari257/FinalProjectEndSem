@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload - EduApp</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Upload Content</h1>
+    <p class="subtitle">Choose what you want to upload</p>
+
+    <div class="card-container">
+      <button class="primary-btn large-btn" id="uploadMaterialBtn">📘 Upload Material</button>
+      <button class="primary-btn large-btn" id="uploadVideoBtn">🎥 Upload Video</button>
+    </div>
+
+    <!-- Hidden upload form -->
+    <form id="uploadForm" class="card hidden">
+      <input type="file" id="fileInput" required>
+      <input type="text" id="fileTitle" placeholder="Enter file title" required>
+      <button type="submit" class="primary-btn">Upload</button>
+    </form>
+
+    <p id="uploadMessage" class="message"></p>
+
+    <button class="secondary-btn" onclick="window.location.href='dashboard.html'">⬅ Back to Dashboard</button>
+  </div>
+
+  <script src="app.jsx"></script>
+</body>
+</html>

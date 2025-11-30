@@ -1,0 +1,39 @@
+<!-- settings.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Settings</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Settings</h1>
+    <p class="subtitle">Personalization, feedback, theme, etc.</p>
+
+    <div class="card">
+      <label class="small">Display Name</label>
+      <input id="displayName" type="text" placeholder="Your name">
+
+      <label class="small">Theme</label>
+      <div class="toggle-row">
+        <button class="primary-btn" onclick="setTheme('light')">Light</button>
+        <button class="secondary-btn" onclick="setTheme('dark')">Dark</button>
+      </div>
+
+      <label class="small" style="margin-top:10px">Feedback</label>
+      <input id="feedback" type="text" placeholder="Your feedback">
+
+      <div style="margin-top:10px;">
+        <button class="primary-btn" onclick="saveSettings()">Save Settings</button>
+      </div>
+      <p id="settingsMsg" class="message"></p>
+    </div>
+
+    <button class="secondary-btn" onclick="window.location.href='role.html'">⬅ Back</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
